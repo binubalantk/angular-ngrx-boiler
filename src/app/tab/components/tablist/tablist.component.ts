@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { TabModel } from '../../models/tab.model';
 import { TabState } from '../../models/tabstate.model';
 import { addTabAction, selectTabAction } from '../../store/actions/tab.actions';
-import { getCurrentTab, getTabs } from '../../store/selectors/tab.selector';
+import { getTabs } from '../../store/selectors/tab.selector';
 
 @Component({
   selector: 'app-tablist',

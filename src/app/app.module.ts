@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
 import { ProductModule } from '../product/product.module';
 import { TabModule } from './tab/tab.module';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -19,7 +18,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
       autoPause: true // Pauses recording actions and state changes when the extension window is not open
     })
   ],
-  declarations: [AppComponent, HelloComponent],
+  declarations: [AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
