@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store/src';
-import { TabModel } from '../../models/tab.model';
+import { TabModel } from '../../../shareable/models/tab.model';
 import { TabState } from '../../models/tabstate.model';
 import { getCurrentTab } from '../../store/selectors/tab.selector';
 
@@ -11,7 +11,7 @@ import { getCurrentTab } from '../../store/selectors/tab.selector';
 })
 export class TabmainComponent implements OnInit {
   currentTab?: TabModel;
-  constructor(private tabStore: Store<TabState>) {
+  constructor(private tabStore: Store<TabState<TabModel>>) {
     tabStore.select(getCurrentTab).subscribe(tab => {
       this.currentTab = tab;
     });

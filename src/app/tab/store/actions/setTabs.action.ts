@@ -1,6 +1,6 @@
 import { createAction, props } from '@ngrx/store';
+import { TabModel } from '../../../shareable/models/tab.model';
 import { TabActions } from '../../enums/tab.action.enum';
-import { TabModel } from '../../models/tab.model';
 
 export const setTabsAction = createAction(
   TabActions.SET_TABS,

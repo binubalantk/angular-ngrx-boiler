@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ModelingTabComponent } from './modeling-tab/modeling-tab.component';
+import { TabNameSpace } from './tab.namespace';
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
-  declarations: []
+  imports: [CommonModule],
+  declarations: [ModelingTabComponent],
+  export: [TabNameSpace]
 })
-export class ModelingModule { }
+export class ModelingModule {}

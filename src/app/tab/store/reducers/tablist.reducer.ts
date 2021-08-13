@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import { TabModel } from '../../models/tab.model';
+import { TabModel } from '../../../shareable/models/tab.model';
 import { setTabsAction } from '../actions/setTabs.action';
 import { addTabAction } from '../actions/tab.actions';
 

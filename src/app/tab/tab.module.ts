@@ -10,11 +10,16 @@ import {
   tabSelectorReducer
 } from './store/reducers/tab.reducers';
 import { TabFeatures } from './enums/feature.enums';
+import { TabModel } from '../shareable/models/tab.model';
+import { OmniModule } from '../omni/omni.module';
+import { ModelingModule } from '../modeling/modeling.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    StoreModule.forFeature<TabState>(TabFeatures.TAB_FEATURE, {
+    OmniModule,
+    ModelingModule,
+    StoreModule.forFeature<TabState<TabModel>>(TabFeatures.TAB_FEATURE, {
       tabs: tabListReducer,
       currentTab: tabSelectorReducer
     })

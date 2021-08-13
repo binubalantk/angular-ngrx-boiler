@@ -1,8 +1,9 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
+import { TabModel } from '../../../shareable/models/tab.model';
 import { TabFeatures } from '../../enums/feature.enums';
 import { TabState } from '../../models/tabstate.model';
 
-const tabStateSelector = createFeatureSelector<TabState>(
+const tabStateSelector = createFeatureSelector<TabState<TabModel>>(
   TabFeatures.TAB_FEATURE
 );
 

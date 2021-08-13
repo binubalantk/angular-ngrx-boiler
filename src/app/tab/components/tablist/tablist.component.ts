@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { TabModel } from '../../models/tab.model';
+import { TabModel } from '../../../shareable/models/tab.model';
 import { TabState } from '../../models/tabstate.model';
 import { addTabAction, selectTabAction } from '../../store/actions/tab.actions';
 import { getTabs } from '../../store/selectors/tab.selector';
@@ -14,7 +14,7 @@ import { getTabs } from '../../store/selectors/tab.selector';
 export class TablistComponent implements OnInit {
   @Input() currentTab?: TabModel;
   tabs: Observable<TabModel[]>;
-  constructor(private tabStore: Store<TabState>) {
+  constructor(private tabStore: Store<TabState<TabModel>>) {
     this.tabs = tabStore.select(getTabs);
   }
 
