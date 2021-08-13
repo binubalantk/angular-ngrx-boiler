@@ -1,0 +1,18 @@
+.app-tab-list {
+  ul {
+    list-style: none;
+    padding-left: 0px;
+    li {
+      padding: 7px;
+      cursor: pointer;
+    }
+    li.active,
+    li:hover {
+      background: rgb(216, 216, 216);
+    }
+    li.new {
+      text-align: center;
+      border: thin solid rgb(189, 189, 189);
+    }
+  }
+}

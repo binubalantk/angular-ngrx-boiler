@@ -1,0 +1,9 @@
+<div>
+  <h4>Product Tiles</h4>
+  <pre *ngIf='!products || !(products | async).length'>No products </pre>
+  <div [ngClass]="'tiles'">
+    <div *ngFor='let product of products | async' (click)="onTileSelect(product)">
+      {{product.title}}
+    </div>
+  </div>
+</div>

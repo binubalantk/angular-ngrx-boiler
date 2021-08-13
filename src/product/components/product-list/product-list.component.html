@@ -1,0 +1,10 @@
+<div>
+  <h4>Product List</h4>
+  <pre *ngIf='!products || !(products | async).length'>No products </pre>
+  <ul>
+    <li *ngFor='let product of products | async'>
+      {{product.title}} {{(selectedProduct && selectedProduct.id === product.id)?'Selected':''}}
+    </li>
+  </ul>
+  <div *ngIf='selectedProduct'> Selected {{ selectedProduct.title }}</div>
+</div>

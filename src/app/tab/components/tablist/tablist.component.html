@@ -1,0 +1,7 @@
+<div [ngClass]="'app-tab-list'">
+  <ul>
+    <li [ngClass]="(currentTab && currentTab.id === tab.id)?'active':'' " *ngFor='let tab of tabs | async'
+      (click)="onTabSelect(tab)">{{tab.title}}</li>
+    <li [ngClass]="'new'" (click)="onNewTab()">+ Add Tab</li>
+  </ul>
+</div>

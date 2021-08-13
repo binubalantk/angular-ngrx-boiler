@@ -1,0 +1,21 @@
+.app-tab-main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  box-sizing: border-box;
+  .app-tab-page {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    app-tablist {
+      width: 150px;
+      height: 100%;
+      background-color: rgb(235, 235, 235);
+    }
+    app-tab-container {
+      width: 100%;
+      height: 100%;
+      border: thin solid rgb(235, 235, 235);
+    }
+  }
+}

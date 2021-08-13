@@ -1,0 +1,11 @@
+<div [ngClass]="'app-product-main-header'">
+  {{title}}
+  <div>
+    <div>
+      <input type="text" placeholder="Product title" [(ngModel)]='currentProduct.title' focus/>
+      <button (click)="onAddProduct()">Add</button>
+    </div>
+    <app-product-list></app-product-list>
+    <app-product-tile></app-product-tile>
+  </div>
+</div>
